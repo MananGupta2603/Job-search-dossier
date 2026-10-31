@@ -1,5 +1,5 @@
 # Dossier Automate Job Search Installation Guide
-## Windows 11 + Docker Desktop + Ollama + Qwen 2.5 7B
+## Windows 11 + Docker Desktop + Ollama + Qwen 2.5:3b
 
 **Purpose:** Reference guide for installing or restoring Dossier with a locally running AI model on Windows.
 
@@ -165,10 +165,10 @@ Do not delete existing containers or database volumes to enable Ollama.
 
 ## 8. Download the Qwen AI model
 
-Download Qwen 2.5 7B:
+Download Qwen 2.5:3b:
 
 ```powershell
-docker compose exec ollama ollama pull qwen2.5:7b
+docker compose exec ollama ollama pull qwen2.5:3b
 ```
 
 The model download is approximately 4.7 GB.
@@ -182,7 +182,7 @@ docker compose exec ollama ollama list
 Expected model:
 
 ```text
-qwen2.5:7b
+qwen2.5:3b
 ```
 
 ## 9. Connect Ollama to Dossier
@@ -201,7 +201,7 @@ Use these settings:
 |---|---|
 | Provider | Local model |
 | Server address | `http://ollama:11434` |
-| Model | `qwen2.5:7b` |
+| Model | `qwen2.5:3b` |
 | API key | Leave empty |
 
 Click **Test connection**.
@@ -245,12 +245,12 @@ http://localhost:3000
 - [x] Dossier application running
 - [x] PostgreSQL database running
 - [x] Ollama service running
-- [x] Qwen 2.5 7B downloaded
+- [x] Qwen 2.5:3b downloaded
 - [x] Dossier connected to Ollama
 - [x] Connection test successful
 
 ---
 
-**Final setup:** Dossier + PostgreSQL + Ollama + Qwen 2.5 7B, running locally through Docker Desktop on Windows.
+**Final setup:** Dossier + PostgreSQL + Ollama + Qwen 2.5:3b, running locally through Docker Desktop on Windows.
 
 **Application URL:** http://localhost:3000
